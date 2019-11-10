@@ -24,10 +24,9 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
     let box1 = req.body.leftBox1;
-    let box2 = box1 * 10;
-    res.render("bodyMain", { leftBox1: box1, rightBox1: box2 });
     let value1 = req.body.donvi1;
-    console.log("vl1 = ", value1);
     let value2 = req.body.donvi2;
-    console.log("vl2 = ", value2);
+    let sub = value1 - value2;
+    let box2 = box1 * Math.pow(10, sub);
+    res.render("bodyMain", { leftBox1: box1, rightBox1: box2 });
 });
