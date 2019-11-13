@@ -1,25 +1,21 @@
 <form action="/" , method="POST">
     <textarea rows="3" , cols="20" , type="number" , name="leftBox1" , placeholder="Nhập giá trị cần đổi" ,
         autofocus>{{leftBox1}}</textarea>
-    <textarea rows="3" , cols="20" , type="number" , name="rightBox1" , placeholder="Kết quả" ,>{{rightBox1}}</textarea>
+    <textarea rows="3" , cols="20" , type="number" , name="rightBox1" , placeholder="Kết quả">{{rightBox1}}
+         </textarea>
     <button type="submit">Convert</button>
-
-
-    <p>
+    <div>
         <h3>Chọn đơn vị cần chuyển:</h3>
         <input name="donvi1" , type="radio" , value="1">mm
         <input name="donvi1" , type="radio" , value="2">cm
         <input name="donvi1" , type="radio" , value="3">dm
         <input name="donvi1" , type="radio" , value="4">m
-
-    </p>
-    <p>
+    </div>
+    <div>
         <h3>Chọn đơn vị được chuyển:</h3>
         <input name="donvi2" , type="radio" , value="1">mm
         <input name="donvi2" , type="radio" , value="2">cm
         <input name="donvi2" , type="radio" , value="3">dm
         <input name="donvi2" , type="radio" , value="4">m
-    </p>
-
-
+    </div>
 </form>

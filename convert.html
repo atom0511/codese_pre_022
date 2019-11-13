@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ban co dong y</title>
+</head>
+
+<body>
+    <header>Convert</header>
+    <div id="abc">
+
+    </div>
+
+    <form id="form">
+        <input oninput="myFunction()" id="var1" type="number" placeholder="Nhập giá trị cần đổi" />
+        <input id="var2" , type="number" , placeholder="Kết quả" />
+
+        <div>
+            <h3>Chọn đơn vị cần chuyển:</h3>
+            <input name="convert1" , type="radio" , value="1">mm
+            <input name="convert1" , type="radio" , value="2">cm
+            <input name="convert1" , type="radio" , value="3">dm
+            <input name="convert1" , type="radio" , value="4">m
+        </div>
+        <div>
+            <h3>Chọn đơn vị được chuyển:</h3>
+            <input name="convert2" , type="radio" , value="1">mm
+            <input name="convert2" , type="radio" , value="2">cm
+            <input name="convert2" , type="radio" , value="3">dm
+            <input name="convert2" , type="radio" , value="4">m
+        </div>
+    </form>
+
+    <script>
+        function myFunction() {
+            let var1 = document.getElementById("var1").value
+            let convert1 = getChecked("convert1");
+            let convert2 = getChecked("convert2");
+            let convertNumber = var1 * Math.pow(10, convert1 - convert2);
+            document.getElementById("var2").value = convertNumber;
+        }
+
+        function getChecked(name) {
+
+            let arr = document.getElementsByName(name);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].checked == true) {
+                    console.log(arr[i].value);
+                    return arr[i].value;
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
