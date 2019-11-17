@@ -1,11 +1,26 @@
-<h3 align="center" , style="margin: 50px">{{questionContent}}</h3>
+<h3 align="center" , style="margin: 50px; font-weight: bold; font-size: 50px ">{{questionContent}}</h3>
 
-<form action="/homePage" , method="POST">
-    <div class="d-flex justify-content-around">
-        <button class="btn btn-danger" name="yesAS" type="button" value="CÓ" onclick="answer()"> CÓ </button>
-        <button class="btn btn-warning" name="yesAS" type="button" value="KHÔNG" onclick="answer()"> KHÔNG </button>
+
+
+<div class="row" style="margin: 50px; position: relative">
+    <div class="col-6">
+        <button type="button" style="position: absolute; margin: 0; left: 50%"
+            class="btn btn-primary button-homepage">Đồng ý</button>
     </div>
-</form>
+    <div class="col-6">
+        <button type="button" style="position: absolute; margin: 0; right: 50%"
+            class="btn btn-danger button-homepage">Không đồng ý</button>
+    </div>
+</div>
+
+
+{{!-- <form action="/homePage" , method="POST">
+    <div class="d-flex justify-content-around">
+        <button class="btn btn-danger" name="yesAS" type="submit" value="CÓ" onclick="answer()"> CÓ </button>
+        <button class="btn btn-warning" name="yesAS" type="button" value="KHÔNG" onclick="answer()"> KHÔNG
+        </button>
+    </div>
+</form> --}}
 
 <script>
     function answer() {

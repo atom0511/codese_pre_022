@@ -1,5 +1,21 @@
-<form action="/ask" , method="POST">
-    <h3>Nhập câu hỏi của bạn</h3>
-    <textarea rows="3" , cols="50" , type="text" , name="questionContent"></textarea>
-    <button type="submit">Gui</button>
-</form>
+<div class="container">
+    <h3 style="margin: 20px 100px">HỎI</h3>
+
+    <form action="/ask" , method="POST">
+
+        <textarea id="input" , class="form-control" rows="7" , type="text" , name="questionContent" ,
+            maxlength="200"></textarea>
+        <span>con <span id="character">200</span>/200 ky tu</span>
+        <button style="margin: 20px 100px;" type="submit">Gui</button>
+
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $("#input").keypress(function () {
+                $("#character").html(10 - $("#input").val().length);
+            })
+        })
+    </script>
+
+</div>

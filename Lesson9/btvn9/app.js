@@ -35,6 +35,10 @@ app.get("/homePage", (req, res) => {
 app.post("/homePage", (req, res) => {
     let as = req.body.yesAS;
     console.log(as);
+    let data = fs.readFileSync("data.json", "utf8");
+    let obj = JSON.parse(data);
+    let questionContent = obj[Math.floor(Math.random() * obj.length)];
+    res.render("answer", { questionContent: questionContent.questionContent });
 });
 
 app.get("/ask", (req, res) => {
