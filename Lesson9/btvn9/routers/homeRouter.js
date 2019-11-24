@@ -14,9 +14,9 @@ Router.get("/", async(req, res) => {
     });
 });
 
-Router.post("/yes", (req, res) => {
-    let id = req.params.id;
-    sampleUpdate(id, "yes");
+Router.post("/yes", async(req, res) => {
+    let id = req.body.id;
+    await sampleUpdate(id, "yes");
     res.render("answer");
 });
 

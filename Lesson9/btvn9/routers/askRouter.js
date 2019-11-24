@@ -7,9 +7,9 @@ Router.get("/ask", (req, res) => {
     res.render("ask");
 });
 
-Router.post("/ask", (req, res) => {
+Router.post("/ask", async(req, res) => {
     let questionContent = req.body.questionContent;
-    sampleCreate(questionContent);
+    await sampleCreate(questionContent);
     res.render("ask");
 });
 module.exports = Router;
